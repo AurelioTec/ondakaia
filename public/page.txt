@@ -1,0 +1,3 @@
+password: PjcGuNTqDLjN0
+database: tuuxmhzf_iamue
+username: iamue
