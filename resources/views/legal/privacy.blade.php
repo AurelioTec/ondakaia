@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-PT">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,16 +35,16 @@
             }
         </style>
     </head>
-    <body class="min-h-screen font-sans text-brandInk antialiased">
-        <main class="mx-auto max-w-4xl px-4 py-10 lg:px-6">
+    <body class="flex min-h-screen flex-col font-sans text-brandInk antialiased">
+        <main class="mx-auto w-full max-w-4xl flex-1 px-4 py-10 lg:px-6">
             <div class="rounded-[2rem] border border-white/70 bg-white/80 p-8 shadow-2xl backdrop-blur">
-                <p class="text-xs font-semibold uppercase tracking-[0.24em] text-brandOrange">Informacao legal</p>
+                <p class="text-xs font-semibold uppercase tracking-[0.24em] text-brandOrange">Informação legal</p>
                 <h1 class="mt-3 text-4xl font-semibold text-brandBlue">Privacidade</h1>
 
                 <div class="prose mt-6 max-w-none text-brandInk/80">
-                    <p>Os dados introduzidos no chat podem ser armazenados para manter o historico das conversas associado a sua conta.</p>
-                    <p>As informacoes de autenticacao e historico sao usadas apenas para fornecer acesso, continuidade da conversa e melhoria da experiencia da plataforma.</p>
-                    <p>Recomendamos que nao partilhe dados sensiveis ou confidenciais nas mensagens enviadas ao agente.</p>
+                    <p>Os dados introduzidos no chat podem ser armazenados para manter o histórico das conversas associado à sua conta.</p>
+                    <p>As informações de autenticação e histórico são usadas apenas para fornecer acesso, continuidade da conversa e melhoria da experiência da plataforma.</p>
+                    <p>Recomendamos que não partilhe dados sensíveis ou confidenciais nas mensagens enviadas ao agente.</p>
                 </div>
             </div>
         </main>

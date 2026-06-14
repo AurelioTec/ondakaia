@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-PT">
 
 <head>
     <meta charset="utf-8">
@@ -132,11 +132,11 @@
                     </span>
 
                     <div class="mt-4 rounded-[1.5rem] border border-brandBlue/10 bg-brandCream/80 p-4">
-                        <p class="text-xs font-semibold uppercase tracking-[0.22em] text-brandOrange">Sessao atual</p>
+                        <p class="text-xs font-semibold uppercase tracking-[0.22em] text-brandOrange">Sessão atual</p>
                         <p class="mt-3 text-xl font-semibold text-brandBlue" id="username">{{ $user->name }}</p>
                         <p class="mt-1 text-sm text-brandInk/70">{{ $user->email }}</p>
                         <p class="mt-4 text-sm leading-7 text-brandInk/70">
-                            O historico das conversas agora fica guardado na base de dados e ligado a sua conta.
+                            O histórico das conversas agora fica guardado na base de dados e ligado à sua conta.
                         </p>
                     </div>
 
@@ -150,39 +150,39 @@
                             @forelse ($conversations as $conversation)
                                 <a href="{{ route('chat.index', ['conversa' => $conversation->id]) }}"
                                     data-conversation-id="{{ $conversation->id }}"
-                                    class="conversation-link mb-2 block rounded-2xl border px-4 py-3 transition {{ $currentConversationId === $conversation->id ? 'border-brandBlue bg-brandBlue text-black shadow-sm' : 'border-brandBlue/10 bg-brandCream/55 text-brandInk hover:border-brandOrange/30 hover:bg-black/35 hover:bg-white' }}">
+                                    class="conversation-link mb-2 block rounded-2xl border px-4 py-3 transition {{ $currentConversationId === $conversation->id ? 'border-brandBlue bg-brandBlue text-white shadow-sm' : 'border-brandBlue/10 bg-brandCream/55 text-brandInk hover:border-brandOrange/30 hover:bg-white' }}">
                                     <p class="truncate text-sm font-semibold">{{ $conversation->title }}</p>
                                     <p
-                                        class="mt-1 text-xs {{ $currentConversationId === $conversation->id ? 'text-black/80' : 'text-black' }}">
+                                        class="mt-1 text-xs {{ $currentConversationId === $conversation->id ? 'text-white/80' : 'text-brandInk/55' }}">
                                         Atualizada em {{ $conversation->updated_at->format('d/m H:i') }}
                                     </p>
                                 </a>
                             @empty
                                 <div id="empty-conversations"
-                                    class="rounded-2xl border border-dashed border-brandBlue/15 bg-brandCream/60 px-4 py-5 text-sm leading-7 text-black/65">
-                                    Ainda nao existem conversas guardadas. Envie a sua primeira mensagem para criar um
-                                    historico.
+                                    class="rounded-2xl border border-dashed border-brandBlue/15 bg-brandCream/60 px-4 py-5 text-sm leading-7 text-brandInk/65">
+                                    Ainda não existem conversas guardadas. Envie a sua primeira mensagem para criar um
+                                    histórico.
                                 </div>
                             @endforelse
                         </div>
                     </div>
 
                     <div
-                        class="mt-6 rounded-[1.75rem] bg-gradient-to-br from-brandBlue to-brandBlueDark p-5 text-black">
-                        <p class="text-xs font-semibold uppercase tracking-[0.24em] text-brandSand">Sugestoes de estudo
+                        class="mt-6 rounded-[1.75rem] bg-gradient-to-br from-brandBlue to-brandBlueDark p-5 text-white">
+                        <p class="text-xs font-semibold uppercase tracking-[0.24em] text-brandSand">Sugestões de estudo
                         </p>
                         <div class="mt-4 grid gap-3 sm:grid-cols-3">
                             <div class="rounded-2xl bg-white/10 p-3">
-                                <p class="text-sm font-semibold">Saudacoes</p>
-                                <p class="mt-1 text-sm text-black/80">Como dizer bom dia e ola.</p>
+                                <p class="text-sm font-semibold">Saudações</p>
+                                <p class="mt-1 text-sm text-white/80">Como dizer bom dia e olá.</p>
                             </div>
                             <div class="rounded-2xl bg-white/10 p-3">
-                                <p class="text-sm font-semibold">Dialogos</p>
-                                <p class="mt-1 text-sm text-black/80">Treine conversas curtas.</p>
+                                <p class="text-sm font-semibold">Diálogos</p>
+                                <p class="mt-1 text-sm text-white/80">Treine conversas curtas.</p>
                             </div>
                             <div class="rounded-2xl bg-white/10 p-3">
-                                <p class="text-sm font-semibold">Correcao</p>
-                                <p class="mt-1 text-sm text-black/80">Peca ajustes nas suas respostas.</p>
+                                <p class="text-sm font-semibold">Correção</p>
+                                <p class="mt-1 text-sm text-white/80">Peça ajustes nas suas respostas.</p>
                             </div>
                         </div>
                     </div>
@@ -202,7 +202,7 @@
                                 @if ($currentConversationId)
                                     A continuar a conversa guardada na base de dados.
                                 @else
-                                    Inicie uma nova conversa com historico persistente.
+                                    Inicie uma nova conversa com histórico persistente.
                                 @endif
                             </p>
                         </div>
@@ -218,7 +218,7 @@
                             @csrf
                             <button type="submit"
                                 class="inline-flex items-center justify-center rounded-full bg-white px-4 py-2 text-sm font-semibold text-black transition hover:bg-black hover:text-white">
-                                Terminar sessao
+                                Terminar sessão
                             </button>
                         </form>
                     </div>
@@ -239,13 +239,13 @@
                             </button>
                             <button type="button"
                                 class="prompt-chip rounded-full border border-brandBlue/15 bg-white px-3 py-2 text-sm text-brandInk/75 transition hover:border-brandBlue/35 hover:text-brandBlue"
-                                data-message="Quero praticar uma apresentacao simples em Umbundo.">
-                                Quero praticar uma apresentacao
+                                data-message="Quero praticar uma apresentação simples em Umbundo.">
+                                Quero praticar uma apresentação
                             </button>
                             <button type="button"
                                 class="prompt-chip rounded-full border border-brandBlue/15 bg-white px-3 py-2 text-sm text-brandInk/75 transition hover:border-brandBlue/35 hover:text-brandBlue"
-                                data-message="Cria um pequeno exercicio com 3 frases para eu responder.">
-                                Da-me um exercicio curto
+                                data-message="Cria um pequeno exercício com 3 frases para eu responder.">
+                                Dá-me um exercício curto
                             </button>
                         </div>
                     </div>
@@ -277,7 +277,7 @@
                             class="mt-3 flex flex-col gap-2 text-xs text-brandInk/55 sm:flex-row sm:items-center sm:justify-between">
                             <p>Pressione <strong>Enter</strong> para enviar e <strong>Shift + Enter</strong> para nova
                                 linha.</p>
-                            <p>O historico desta conversa fica guardado na sua conta.</p>
+                            <p>O histórico desta conversa fica guardado na sua conta.</p>
                         </div>
                     </form>
                 </div>
@@ -289,7 +289,7 @@
         (function($) {
             const starterMessage = {
                 papel: 'assistant',
-                texto: 'Ola! Sou o teu professor virtual de Umbundo. Podes pedir traducoes, vocabulario, dialogos ou exercicios. Como queres comecar?',
+                texto: 'Olá! Sou o teu professor virtual de Umbundo. Podes pedir traduções, vocabulário, diálogos ou exercícios. Como queres começar?',
                 hora: 'Agora',
             };
 
@@ -341,31 +341,36 @@
                 const isUser = message.papel === 'user';
                 const isSystem = message.papel === 'system';
                 const wrapperClass = isUser ? 'items-end' : 'items-start';
+                const bubbleStyle = isUser ?
+                    'background-color: #0A3D68; color: #FFFFFF; border-color: rgba(6, 43, 73, 0.4);' :
+                    isSystem ?
+                    'background-color: #FFF1F2; color: #881337; border-color: #FECDD3;' :
+                    'background-color: #FFFFFF; color: #1D3448; border-color: rgba(10, 61, 104, 0.12);';
                 const bubbleClass = isUser ?
-                    'bg-brandBlue text-black border border-brandBlueDark/40 rounded-[1.4rem] rounded-br-md' :
+                    'rounded-[1.4rem] rounded-br-md border' :
                     isSystem ?
-                    'bg-rose-50 text-rose-900 border border-rose-200 rounded-[1.4rem] rounded-bl-md' :
-                    'bg-white text-brandInk border border-brandBlue/12 rounded-[1.4rem] rounded-bl-md shadow-sm';
-                const metaClass = isSystem ? 'text-rose-600' : 'text-brandInk/60';
-                const badgeClass = isUser ?
-                    'bg-brandOrange text-black' :
+                    'rounded-[1.4rem] rounded-bl-md border' :
+                    'rounded-[1.4rem] rounded-bl-md border shadow-sm';
+                const metaStyle = isSystem ? 'color: #E11D48;' : 'color: rgba(29, 52, 72, 0.6);';
+                const badgeStyle = isUser ?
+                    'background-color: #C96532; color: #000000;' :
                     isSystem ?
-                    'bg-rose-500 text-black' :
-                    'bg-brandBlue/10 text-brandBlue';
+                    'background-color: #F43F5E; color: #000000;' :
+                    'background-color: rgba(10, 61, 104, 0.1); color: #0A3D68;';
                 const nome = isUser ? $user.text() : isSystem ? 'Sistema' : 'Professor';
 
                 return `
                         <article class="flex ${wrapperClass} animate-reveal">
                             <div class="max-w-[94%] sm:max-w-[82%]">
                                 <div class="mb-1.5 flex items-center gap-2 ${isUser ? 'justify-end' : 'justify-start'}">
-                                    <span class="inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] ${badgeClass}">
+                                    <span class="inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.18em]" style="${badgeStyle}">
                                         ${nome}
                                     </span>
-                                    <span class="text-[11px] font-semibold ${metaClass}">
+                                    <span class="text-[11px] font-semibold" style="${metaStyle}">
                                         ${message.hora || createTimestamp()}
                                     </span>
                                 </div>
-                                <div class="message-bubble prose prose-sm max-w-none leading-7 ${bubbleClass} px-4 py-3">
+                                <div class="message-bubble prose prose-sm max-w-none leading-7 ${bubbleClass} px-4 py-3" style="${bubbleStyle}">
                                     <p>${escapeHtml(message.texto)}</p>
                                 </div>
                             </div>
@@ -374,19 +379,24 @@
             }
 
             function typingCard() {
+                const bubbleStyle = 'background-color: #FFFFFF; color: #1D3448; border-color: rgba(10, 61, 104, 0.12);';
+                const bubbleClass = 'rounded-[1.4rem] rounded-bl-md border shadow-sm';
+                const badgeStyle = 'background-color: rgba(10, 61, 104, 0.1); color: #0A3D68;';
+                const metaStyle = 'color: rgba(29, 52, 72, 0.6);';
+
                 return `
                         <article id="typing-indicator" class="flex items-start animate-reveal">
                             <div class="max-w-[75%]">
                                 <div class="mb-1.5 flex items-center gap-2">
-                                    <span class="inline-flex items-center rounded-full bg-brandBlue/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-brandBlue">
-                                        Agente IA
+                                    <span class="inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.18em]" style="${badgeStyle}">
+                                        Professor
                                     </span>
-                                    <span class="text-[11px] font-semibold text-brandInk/55">A escrever...</span>
+                                    <span class="text-[11px] font-semibold" style="${metaStyle}">A escrever...</span>
                                 </div>
-                                <div class="flex items-center gap-1.5 rounded-[1.4rem] rounded-bl-md border border-brandBlue/12 bg-white px-4 py-3 shadow-sm">
-                                    <span class="h-2.5 w-2.5 rounded-full bg-brandBlue/45 animate-blink"></span>
-                                    <span class="h-2.5 w-2.5 rounded-full bg-brandBlue/45 animate-blink [animation-delay:0.2s]"></span>
-                                    <span class="h-2.5 w-2.5 rounded-full bg-brandBlue/45 animate-blink [animation-delay:0.4s]"></span>
+                                <div class="flex items-center gap-1.5 ${bubbleClass} px-4 py-3" style="${bubbleStyle}">
+                                    <span class="h-2.5 w-2.5 rounded-full animate-blink" style="background-color: rgba(10, 61, 104, 0.45);"></span>
+                                    <span class="h-2.5 w-2.5 rounded-full animate-blink [animation-delay:0.2s]" style="background-color: rgba(10, 61, 104, 0.45);"></span>
+                                    <span class="h-2.5 w-2.5 rounded-full animate-blink [animation-delay:0.4s]" style="background-color: rgba(10, 61, 104, 0.45);"></span>
                                 </div>
                             </div>
                         </article>
@@ -520,7 +530,7 @@
                         appendMessage({
                             papel: 'assistant',
                             texto: response.resposta ||
-                                'Recebi a tua mensagem, mas nao consegui gerar uma resposta agora.',
+                                'Recebi a tua mensagem, mas não consegui gerar uma resposta agora.',
                         });
                     })
                     .fail(function(xhr) {

@@ -81,7 +81,7 @@
                     <p class="text-sm font-semibold uppercase tracking-[0.24em] text-brandOrange">Autenticacao</p>
                     <h2 class="mt-2 text-3xl font-semibold text-black">Entrar</h2>
                     <p class="mt-3 text-sm leading-7 text-brandInk/70">
-                        Use o seu email e palavra-passe para abrir o chat com historico guardado.
+                        Use o seu email e password para abrir o chat com historico guardado.
                     </p>
                 </div>
 
@@ -103,7 +103,7 @@
 
                     <div>
                         <label for="password"
-                            class="mb-2 block text-sm font-semibold text-brandInk">Palavra-passe</label>
+                            class="mb-2 block text-sm font-semibold text-brandInk">Palavra passe</label>
                         <input id="password" name="password" type="password" required
                             class="w-full rounded-2xl border border-brandBlue/15 bg-brandCream px-4 py-3 text-sm text-brandInk focus:border-brandBlue focus:ring-brandBlue/20">
                     </div>
