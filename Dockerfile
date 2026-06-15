@@ -26,6 +26,9 @@ WORKDIR /var/www/html
 # Copy application files
 COPY . /var/www/html/
 
+# Create .env file if it doesn't exist
+RUN if [ ! -f /var/www/html/.env ]; then cp /var/www/html/.env.example /var/www/html/.env; fi
+
 # Install dependencies
 RUN composer install --no-dev --optimize-autoloader --no-interaction
 
