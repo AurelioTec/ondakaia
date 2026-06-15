@@ -5,6 +5,6 @@
     "dockerContext": "."
   },
   "deploy": {
-    "healthcheckPath": "/up"
+    "healthcheckPath": "/"
   }
 }
