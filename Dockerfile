@@ -1,4 +1,4 @@
-FROM php:8.2-apache
+FROM php:8.3-apache
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
@@ -25,6 +25,13 @@ WORKDIR /var/www/html
 
 # Copy application files
 COPY . /var/www/html/
+
+# Install dependencies
+RUN composer install --no-dev --optimize-autoloader --no-interaction
+
+# Configure Apache document root to Laravel's public directory
+RUN sed -ri 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/000-default.conf
+RUN sed -ri 's!/var/www/!/var/www/html/public/!g' /etc/apache2/apache2.conf
 
 # Copy start script
 COPY docker/start.sh /usr/local/bin/start-app
